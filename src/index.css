@@ -36,3 +36,17 @@ nav .logo-container img {
 nav .icon {
   color: rgb(255, 255, 355);
 }
+
+/*----- Dashboard -----*/
+
+.dashboard {
+  padding: 30px;
+  width: 100%;
+}
+
+.dashboard .ticket-container {
+  height: 80vh;
+  overflow: scroll;
+}
+
+

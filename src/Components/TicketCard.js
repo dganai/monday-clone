@@ -1,4 +1,4 @@
 const TicketCard = () => {
-  return <div>TicketCard</div>;
+  return <div className="ticket-card"></div>;
 };
 export default TicketCard;
