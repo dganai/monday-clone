@@ -50,3 +50,9 @@ nav .icon {
 }
 
 
+/*----- TicketCard -----*/
+
+.ticker-card {
+  display: flex;
+  width: 100%;
+}
