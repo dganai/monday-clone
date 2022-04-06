@@ -37,6 +37,16 @@ const TicketPage = () => {
               required={true}
               value={formData.title}
             />
+
+            <label htmlFor="description">Description</label>
+            <input
+              id="description"
+              name="description"
+              type="text"
+              onChange={handleChange}
+              required={true}
+              value={formData.description}
+            />
           </section>
         </form>
       </div>
