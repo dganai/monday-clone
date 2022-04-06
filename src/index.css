@@ -62,8 +62,9 @@ nav .icon {
 }
 
 .ticket-card #link > * {
-  background-color: rgd(221, 221, 221);
+  background-color: rgb(221, 221, 221);
   margin: 2px;
+  padding: 30px;
   width: 100%;
   display: flex;
   align-items: center;
