@@ -21,6 +21,7 @@ const TicketPage = () => {
     }));
   };
 
+  const categories = ['test1', 'test2'];
   console.log(formData);
   return (
     <div className="ticket">
@@ -54,11 +55,11 @@ const TicketPage = () => {
               value={formData.category}
               onChange={handleChange}
             >
-              {categories?.map(category, index) => (
-                <option>
-                  
-                </option>
-              )}
+              {categories?.map((category, index) => {
+                <option key={index} value={category}>
+                  {category}
+                </option>;
+              })}
             </select>
 
             <label htmlFor="new-category">New Category</label>
