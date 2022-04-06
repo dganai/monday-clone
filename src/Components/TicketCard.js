@@ -12,11 +12,11 @@ const TicketCard = ({ color, ticket }) => {
         <div className="ticket-color"></div>
         <h3>{ticket.title}</h3>
         <AvatarDisplay ticket={ticket} />
-        <StatusDisplay />
+        <StatusDisplay status={ticket.status} />
         <PriorityDisplay />
         <ProgressDisplay />
       </Link>
-        <DeleteBlock />
+      <DeleteBlock />
     </div>
   );
 };

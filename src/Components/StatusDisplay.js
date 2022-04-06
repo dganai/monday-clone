@@ -1,5 +1,5 @@
 const StatusDisplay = ({ status }) => {
-  const getColor = () => {
+  const getColor = (status) => {
     let color;
     switch (status) {
       case 'done':
@@ -16,6 +16,13 @@ const StatusDisplay = ({ status }) => {
     }
     return color;
   };
-  return <div>StatusDisplay</div>;
+  return (
+    <div
+      className="status-display"
+      style={{ backgroundColor: getColor(status) }}
+    >
+      {status}
+    </div>
+  );
 };
 export default StatusDisplay;
