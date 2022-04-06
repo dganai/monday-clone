@@ -49,10 +49,27 @@ nav .icon {
   overflow: scroll;
 }
 
-
 /*----- TicketCard -----*/
 
 .ticker-card {
   display: flex;
   width: 100%;
+}
+
+.ticket-card #link {
+  display: flex;
+  width: 100%;
+}
+
+.ticket-card #link > * {
+  background-color: rgd(221, 221, 221);
+  margin: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ticket-card .ticket-color {
+  width: 15px;
+  margin: 2px;
 }
