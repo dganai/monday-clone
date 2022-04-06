@@ -20,9 +20,7 @@ const TicketPage = () => {
       [name]: value,
     }));
   };
-
   const categories = ['test1', 'test2'];
-  console.log(formData);
   return (
     <div className="ticket">
       <h1>{editmMode ? 'Update your Ticket' : 'Create a Ticket'}</h1>
@@ -71,6 +69,54 @@ const TicketPage = () => {
               required={true}
               value={formData.category}
             />
+            <label>Priority</label>
+            <div className="multiple-input-container">
+              <input
+                id="priority-1"
+                name="priority"
+                type="radio"
+                onChange={handleChange}
+                value={1}
+                checked={formData.priority === 1}
+              />
+              <label htmlFor="priority-1">1</label>
+              <input
+                id="priority-1"
+                name="priority"
+                type="radio"
+                onChange={handleChange}
+                value={1}
+                checked={formData.priority === 1}
+              />
+              <label htmlFor="priority-1">1</label>
+              <input
+                id="priority-1"
+                name="priority"
+                type="radio"
+                onChange={handleChange}
+                value={1}
+                checked={formData.priority === 1}
+              />
+              <label htmlFor="priority-1">1</label>
+              <input
+                id="priority-1"
+                name="priority"
+                type="radio"
+                onChange={handleChange}
+                value={1}
+                checked={formData.priority === 1}
+              />
+              <label htmlFor="priority-1">1</label>
+              <input
+                id="priority-1"
+                name="priority"
+                type="radio"
+                onChange={handleChange}
+                value={1}
+                checked={formData.priority === 1}
+              />
+              <label htmlFor="priority-1">1</label>
+            </div>
           </section>
         </form>
       </div>
