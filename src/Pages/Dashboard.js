@@ -23,7 +23,7 @@ const Dashboard = () => {
       avatar:
         'https://pbs.twimg.com/profile_images/1451194743082274817/R40F4wqK_400x400.jpg',
       status: 'working on it',
-      priority: 7,
+      priority: 2,
       progress: 65,
       description: 'Make a video on how to build something',
       timestamp: '2022-04-01',
@@ -36,7 +36,7 @@ const Dashboard = () => {
       avatar:
         'https://pbs.twimg.com/profile_images/1451194743082274817/R40F4wqK_400x400.jpg',
       status: 'working on it',
-      priority: 4,
+      priority: 3,
       progress: 10,
       description: 'How to build an API',
       timestamp: '2022-04-03',
