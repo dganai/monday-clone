@@ -133,3 +133,23 @@ nav .icon {
   background-color: rgb(104, 104, 175);
   height: 100%;
 }
+
+.ticket-card .delete-block {
+  background-color: rgb(211, 211, 211);
+  width: 50px;
+  margin: 2px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ticket-card .delete-block .delete-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(61, 61, 61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
