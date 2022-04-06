@@ -1,4 +1,6 @@
 const AvatarDisplay = () => {
-  return <div>AvatarDisplay</div>;
+  return <div className="avatar-container">
+    
+  </div>;
 };
 export default AvatarDisplay;
