@@ -54,14 +54,15 @@ const Dashboard = () => {
           uniqueCateogories?.map((uniqueCateogory, categoryIndex) => (
             <div key={categoryIndex}>
               <h3>{uniqueCateogory}</h3>
-              {tickets.filter(ticket => ticket.category === uniqueCateogory)
-              .map((filteredTicket, index) => (
-              <TicketCard
-                id={index}
-                color={filteredTicket.color}
-                ticket={filteredTicket}
-              />
-              )) }
+              {tickets
+                .filter((ticket) => ticket.category === uniqueCateogory)
+                .map((filteredTicket, _index) => (
+                  <TicketCard
+                    id={_index}
+                    color={filteredTicket.color}
+                    ticket={filteredTicket}
+                  />
+                ))}
             </div>
           ))}
         <TicketCard />
