@@ -47,6 +47,29 @@ const TicketPage = () => {
               required={true}
               value={formData.description}
             />
+
+            <label>Category</label>
+            <select
+              name="category"
+              value={formData.category}
+              onChange={handleChange}
+            >
+              {categories?.map(category, index) => (
+                <option>
+                  
+                </option>
+              )}
+            </select>
+
+            <label htmlFor="new-category">New Category</label>
+            <input
+              id="new-category"
+              name="category"
+              type="text"
+              onChange={handleChange}
+              required={true}
+              value={formData.category}
+            />
           </section>
         </form>
       </div>
