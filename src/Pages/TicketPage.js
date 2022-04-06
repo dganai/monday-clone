@@ -1,19 +1,27 @@
-import { useState } from "react";
-
+import { useState } from 'react';
 
 const TicketPage = () => {
   const [formData, setFormData] = useState({
-    s
-  })
+    staus: 'not started',
+    progress: 0,
+    timestamp: new Date().toISOString(),
+  });
   const editmMode = false;
 
   const handleSubmit = () => {
     console.log('submitted');
   };
-  const handleChange = () => {
-    console.log('changed');
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
+  console.log(formData);
   return (
     <div className="ticket">
       <h1>{editmMode ? 'Update your Ticket' : 'Create a Ticket'}</h1>
