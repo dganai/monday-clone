@@ -26,7 +26,25 @@ const Dashboard = () => {
       description: 'Make a video on how to build something',
       timestamp: '2022-04-01',
     },
+    {
+      category: 'Q2 2022',
+      color: 'blue',
+      title: 'How to build APIs',
+      owner: 'Dina Ganai',
+      avatar: 'https://avatars.githubusercontent.com/u/91380160?v=4',
+      status: 'done',
+      priority: 4,
+      progress: 10,
+      description: 'How to build an API',
+      timestamp: '2022-04-05',
+    },
   ];
+
+  const uniqueCateogories = [
+    ...new Set(tickets?.map(({ category }) => category)),
+  ];
+
+  console.log(uniqueCateogories);
 
   return (
     <div className="dashboard">
