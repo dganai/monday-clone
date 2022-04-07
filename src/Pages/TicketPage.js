@@ -31,7 +31,7 @@ const TicketPage = ({ editMode }) => {
 
   const fetchData = async () => {
     const response = await axios.get(`http://localhost:8000/tickets/${id}`);
-    setFormData(response.data);
+    setFormData(response.data.data);
   };
 
   useEffect(() => {
