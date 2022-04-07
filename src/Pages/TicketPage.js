@@ -71,7 +71,6 @@ const TicketPage = () => {
             />
             <label>Priority</label>
             <div className="multiple-input-container">
-              <label htmlFor="priority-1">1</label>
               <input
                 id="priority-1"
                 name="priority"
@@ -80,7 +79,7 @@ const TicketPage = () => {
                 value={1}
                 checked={formData.priority === 1}
               />
-              <label htmlFor="priority-2">2</label>
+              <label htmlFor="priority-1">1</label>
               <input
                 id="priority-2"
                 name="priority"
@@ -89,7 +88,7 @@ const TicketPage = () => {
                 value={2}
                 checked={formData.priority === 2}
               />
-              <label htmlFor="priority-3">3</label>
+              <label htmlFor="priority-2">2</label>
               <input
                 id="priority-3"
                 name="priority"
@@ -98,7 +97,7 @@ const TicketPage = () => {
                 value={3}
                 checked={formData.priority === 3}
               />
-              <label htmlFor="priority-4">4</label>
+              <label htmlFor="priority-3">3</label>
               <input
                 id="priority-4"
                 name="priority"
@@ -107,7 +106,7 @@ const TicketPage = () => {
                 value={4}
                 checked={formData.priority === 1}
               />
-              <label htmlFor="priority-5">5</label>
+              <label htmlFor="priority-4">4</label>
               <input
                 id="priority-5"
                 name="priority"
@@ -116,6 +115,7 @@ const TicketPage = () => {
                 value={5}
                 checked={formData.priority === 5}
               />
+              <label htmlFor="priority-5">5</label>
             </div>
 
             {editMode && (
