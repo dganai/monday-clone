@@ -8,9 +8,9 @@ const axios = require('axios');
 const app = express();
 
 // url to communicate with backend
-// url is for making tickets in collection
+// url is for making tickets in task collection
 const url =
-  'https://8f7cbd20-d511-4eac-8ce2-333695b6f55b-us-east1.apps.astra.datastax.com/api/rest/v2/namespaces/tickets/collections';
+  'https://8f7cbd20-d511-4eac-8ce2-333695b6f55b-us-east1.apps.astra.datastax.com/api/rest/v2/namespaces/tickets/collections/tasks';
 const token =
   'AstraCS:DAoiaZuYUMmiqjyFEZLOfMHX:33fcda178f0b71ca7d47ff07dd030a0da22468e8f6d185c0c4de75a81963ff07';
 
@@ -28,6 +28,14 @@ app.post('/tickets', async (req, res) => {
     },
     data: formData,
   };
+
+  try {
+    const response = await axios(url, options);
+    res.status(200).json(response.data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err });
+  }
 });
 
 // listen to changes on the PORT

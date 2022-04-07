@@ -17,7 +17,6 @@ const Dashboard = () => {
     },
     {
       category: 'Q1 2022',
-      color: 'red',
       title: 'Building Something',
       owner: 'Dina Ganai',
       avatar:
