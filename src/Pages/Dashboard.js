@@ -12,9 +12,15 @@ const Dashboard = () => {
 
     const arrayOfKeys = Object.keys(dataObj);
     const arrayOfData = Object.keys(dataObj).map((key) => dataObj[key]);
-
-    console.log('array of keys', arrayOfKeys);
-    console.log('array of data', arrayOfData);
+    const formattedArray = [];
+    arrayOfKeys.forEach((key, index) => {
+      const formattedData = {
+        ...arrayOfData[index],
+      };
+      formattedData['documentId'] = key;
+      formattedArray.push(formattedData);
+    });
+    console.log(formattedArray);
   }, []);
 
   const colors = [
