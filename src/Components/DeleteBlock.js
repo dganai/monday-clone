@@ -1,4 +1,3 @@
-import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
 import axios from 'axios';
 
 const DeleteBlock = ({ documentId }) => {

@@ -60,35 +60,23 @@ app.post('/tickets', async (req, res) => {
 
 // deleting task
 app.delete('/tickets/:documentId', async (req, res) => {
-  const id = req.params.documentId
+  const id = req.params.documentId;
 
   const options = {
     method: 'DELETE',
     headers: {
       Accepts: 'application/json',
-      'X-Cassandra-Token': token,,\
-    }
-  }
+      'X-Cassandra-Token': token,
+    },
+  };
   try {
-   const response = await axios(`${url}/${id}`, options)
-    res.status(200).json(response.data)
-  } catch(err) {
-    console.log(err)
-    res.status(500).json({message: err})
+    const response = await axios(`${url}/${id}`, options);
+    res.status(200).json(response.data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err });
   }
-})
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 // listen to changes on the PORT
 app.listen(PORT, () => console.log(`server running on PORT ${PORT}`));

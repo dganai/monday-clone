@@ -15,7 +15,7 @@ const TicketCard = ({ color, ticket }) => {
         <StatusDisplay status={ticket.status} />
         <PriorityDisplay priority={ticket.priority} />
         <ProgressDisplay progress={ticket.progress} />
-        <DeleteBlock />
+        <DeleteBlock documentId={ticket.documentId} />
       </Link>
     </div>
   );
