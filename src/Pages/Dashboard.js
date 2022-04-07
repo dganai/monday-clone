@@ -26,6 +26,10 @@ const Dashboard = () => {
     setTickets(formattedArray);
   }, []);
 
+  useEffect(() => {
+    setCategories([...new Set(tickets?.map(({ category }) => category))]);
+  });
+
   const colors = [
     'rgb(255, 179, 186)',
     'rgb(255, 223, 186)',
@@ -35,7 +39,7 @@ const Dashboard = () => {
   ];
 
   const uniqueCategories = [
-    setCategories(...new Set(tickets?.map(({ category }) => category))),
+    ...new Set(tickets?.map(({ category }) => category)),
   ];
 
   return (
