@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CategoriesContext from '../context';
 
@@ -31,7 +31,12 @@ const TicketPage = ({ editMode }) => {
 
   const fetchData = async () => {
     const response = await axios.get(`http://localhost:8000/tickets/${id}`);
+    setFormData(response.data);
   };
+
+  useEffect(() => {
+    if (editMode) fetchData();
+  }, []);
 
   const handleChange = (e) => {
     const value = e.target.value;
