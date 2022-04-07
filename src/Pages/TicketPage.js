@@ -3,13 +3,13 @@ import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CategoriesContext from '../context';
 
-const TicketPage = () => {
+const TicketPage = ({ editMode }) => {
   const [formData, setFormData] = useState({
     status: 'not started',
     progress: 0,
     timestamp: new Date().toISOString(),
   });
-  const editMode = false;
+
   const { categories, setCategories } = useContext(CategoriesContext);
 
   const navigate = useNavigate();
