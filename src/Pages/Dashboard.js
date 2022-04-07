@@ -1,7 +1,14 @@
 import TicketCard from '../Components/TicketCard';
+import axios from 'axios';
+import { useState, useEffect, useContext } from 'react';
 
 const Dashboard = () => {
- 
+  const [tickets, setTickers] = useState(null);
+
+  useEffect(async () => {
+   const response = await axios.get('http://localhost:8000/tickets');
+   
+  }, []);
 
   const colors = [
     'rgb(255, 179, 186)',
