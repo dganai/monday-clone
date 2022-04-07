@@ -18,13 +18,14 @@ const TicketPage = ({ editMode }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if(editMode) {
+    if (editMode) {
       const response = await axios.put(`http://localhost:8000/tickets/${id}`, {
-        data: formData
-      })
-          const success = response.status === 200;
+        data: formData,
+      });
+      const success = response.status === 200;
       if (success) {
         navigate('/');
+      }
     }
 
     if (!editMode) {
