@@ -5,7 +5,7 @@ import CategoriesContext from '../context';
 
 const TicketPage = ({ editMode }) => {
   const [formData, setFormData] = useState({
-    status: 'not started',
+    status: 'Need Assistance',
     progress: 0,
     timestamp: new Date().toISOString(),
   });
@@ -173,23 +173,23 @@ const TicketPage = ({ editMode }) => {
                   value={formData.status}
                   onChange={handleChange}
                 >
-                  <option selected={formData.status === 'done'} value="done">
+                  <option selected={formData.status === 'Done'} value="Done">
                     Done
                   </option>
                   <option
-                    selected={formData.status === 'working on it'}
-                    value="working on it"
+                    selected={formData.status === 'In Progress'}
+                    value="In Progress"
                   >
-                    Working on it
+                    In Progress
                   </option>
-                  <option selected={formData.status === 'stuck'} value="stuck">
+                  <option selected={formData.status === 'Stuck'} value="Stuck">
                     Stuck
                   </option>
                   <option
-                    selected={formData.status === 'not started'}
-                    value="not started"
+                    selected={formData.status === 'Need Assistance'}
+                    value="Need Assistance"
                   >
-                    Not Started
+                    Need Assistance
                   </option>
                 </select>
               </>
