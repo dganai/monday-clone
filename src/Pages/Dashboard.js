@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 
 const Dashboard = () => {
-  const [tickets, setTickers] = useState(null);
+  const [tickets, setTickets] = useState(null);
 
   useEffect(async () => {
     const response = await axios.get('http://localhost:8000/tickets');
@@ -20,7 +20,8 @@ const Dashboard = () => {
       formattedData['documentId'] = key;
       formattedArray.push(formattedData);
     });
-    console.log(formattedArray);
+
+    setTickets(formattedArray);
   }, []);
 
   const colors = [
