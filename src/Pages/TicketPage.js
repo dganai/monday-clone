@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 const TicketPage = () => {
   const [formData, setFormData] = useState({
-    staus: 'not started',
+    status: 'not started',
     progress: 0,
     timestamp: new Date().toISOString(),
   });
-  const editmMode = false;
+  const editMode = false;
 
   const handleSubmit = () => {
     console.log('submitted');
@@ -23,7 +23,7 @@ const TicketPage = () => {
   const categories = ['test1', 'test2'];
   return (
     <div className="ticket">
-      <h1>{editmMode ? 'Update your Ticket' : 'Create a Ticket'}</h1>
+      <h1>{editMode ? 'Update your Ticket' : 'Create a Ticket'}</h1>
       <div className="ticket-container">
         <form onSubmit={handleSubmit}>
           <section>
@@ -117,20 +117,47 @@ const TicketPage = () => {
                 checked={formData.priority === 5}
               />
             </div>
-            {editMode && (
-              <>
-                <input
-                  type="range"
-                  id="progress"
-                  name="progress"
-                  value={formData.progress}
-                  min="0"
-                  max="100"
-                  onChange={handleChange}
-                />
-                <label htmlFor="progress">Progress</label>
-              </>
-            )}
+            {/*editMode && */}
+            <>
+              <input
+                type="range"
+                id="progress"
+                name="progress"
+                value={formData.progress}
+                min="0"
+                max="100"
+                onChange={handleChange}
+              />
+              <label htmlFor="progress">Progress</label>
+            </>
+
+            <label>Status</label>
+            <select
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+            >
+              <option selected={formData.status === 'done'} value="done">
+                Done
+              </option>
+              <option
+                selected={formData.status === 'working on it'}
+                value="working on it"
+              >
+                Working on it
+              </option>
+              <option selected={formData.status === 'stuck'} value="stuck">
+                Stuck
+              </option>
+              <option
+                selected={formData.status === 'not started'}
+                value="not started"
+              >
+                Not Started
+              </option>
+            </select>
+
+            {/* } */}
           </section>
         </form>
       </div>
