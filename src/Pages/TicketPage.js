@@ -179,6 +179,11 @@ const TicketPage = () => {
               required={true}
               value={formData.avatar}
             />
+            <div className="image-preview">
+              {formData.avatar && (
+                <img src={formData.avatar} alt="image-preview" />
+              )}
+            </div>
           </section>
         </form>
       </div>
