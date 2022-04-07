@@ -16,6 +16,24 @@ const url =
 const token =
   'AstraCS:DAoiaZuYUMmiqjyFEZLOfMHX:33fcda178f0b71ca7d47ff07dd030a0da22468e8f6d185c0c4de75a81963ff07';
 
+// use data from db
+app.get('/tickets', async (req, res) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      Accepts: 'application/json',
+      'X-Cassandra-Token': token,
+    },
+  };
+  try {
+    const response = await axios(`${url}?page-size=20`, options);
+    res.status(200).json(response.data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err });
+  }
+});
+
 // creating tickets
 app.post('/tickets', async (req, res) => {
   const formData = req.body.formData;
