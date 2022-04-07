@@ -70,7 +70,7 @@ app.delete('/tickets/:documentId', async (req, res) => {
     }
   }
   try {
-    await axios(`${url}/${id}`, options)
+   const response = await axios(`${url}/${id}`, options)
     res.status(200).json(response.data)
   } catch(err) {
     console.log(err)
