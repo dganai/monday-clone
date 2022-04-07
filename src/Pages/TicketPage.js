@@ -10,13 +10,13 @@ const TicketPage = () => {
   });
   const editMode = false;
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!editMode) {
-      const response = await axios.post('http://localhost:8080/tickets', {
+      const response = await axios.post('http://localhost:8000/tickets', {
         formData,
       });
       const success = response.status === 200;
