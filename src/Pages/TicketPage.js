@@ -16,7 +16,7 @@ const TicketPage = () => {
     e.preventDefault();
 
     if (!editMode) {
-      const response = await axios.post('https://localhost:8080/tickets', {
+      const response = await axios.post('http://localhost:8080/tickets', {
         formData,
       });
       const success = response.status === 200;
@@ -35,6 +35,7 @@ const TicketPage = () => {
     }));
   };
   const categories = ['test1', 'test2'];
+
   return (
     <div className="ticket">
       <h1>{editMode ? 'Update your Ticket' : 'Create a Ticket'}</h1>
@@ -91,7 +92,7 @@ const TicketPage = () => {
                 type="radio"
                 onChange={handleChange}
                 value={1}
-                checked={formData.priority === 1}
+                checked={formData.priority == 1}
               />
               <label htmlFor="priority-1">1</label>
               <input
@@ -100,7 +101,7 @@ const TicketPage = () => {
                 type="radio"
                 onChange={handleChange}
                 value={2}
-                checked={formData.priority === 2}
+                checked={formData.priority == 2}
               />
               <label htmlFor="priority-2">2</label>
               <input
@@ -109,7 +110,7 @@ const TicketPage = () => {
                 type="radio"
                 onChange={handleChange}
                 value={3}
-                checked={formData.priority === 3}
+                checked={formData.priority == 3}
               />
               <label htmlFor="priority-3">3</label>
               <input
@@ -118,7 +119,7 @@ const TicketPage = () => {
                 type="radio"
                 onChange={handleChange}
                 value={4}
-                checked={formData.priority === 1}
+                checked={formData.priority == 4}
               />
               <label htmlFor="priority-4">4</label>
               <input
@@ -127,7 +128,7 @@ const TicketPage = () => {
                 type="radio"
                 onChange={handleChange}
                 value={5}
-                checked={formData.priority === 5}
+                checked={formData.priority == 5}
               />
               <label htmlFor="priority-5">5</label>
             </div>

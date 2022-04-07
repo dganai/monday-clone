@@ -6,6 +6,8 @@ const axios = require('axios');
 
 // call express and assign to new var
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 // url to communicate with backend
 // url is for making tickets in task collection
