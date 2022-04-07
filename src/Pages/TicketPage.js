@@ -66,7 +66,7 @@ const TicketPage = () => {
             <label>Category</label>
             <select
               name="category"
-              value={formData.category}
+              value={formData.category || categories[0]}
               onChange={handleChange}
             >
               {categories?.map((category, index) => {
@@ -82,7 +82,6 @@ const TicketPage = () => {
               name="category"
               type="text"
               onChange={handleChange}
-              required={true}
               value={formData.category}
             />
             <label>Priority</label>

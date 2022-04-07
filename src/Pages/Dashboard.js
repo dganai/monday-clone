@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     setCategories([...new Set(tickets?.map(({ category }) => category))]);
-  });
+  }, []);
 
   const colors = [
     'rgb(255, 179, 186)',
