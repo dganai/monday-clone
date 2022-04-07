@@ -6,8 +6,15 @@ const Dashboard = () => {
   const [tickets, setTickers] = useState(null);
 
   useEffect(async () => {
-   const response = await axios.get('http://localhost:8000/tickets');
-   
+    const response = await axios.get('http://localhost:8000/tickets');
+
+    const dataObj = response.data.data;
+
+    const arrayOfKeys = Object.keys(dataObj);
+    const arrayOfData = Object.keys(dataObj).map((key) => dataObj[key]);
+
+    console.log('array of keys', arrayOfKeys);
+    console.log('array of data', arrayOfData);
   }, []);
 
   const colors = [
