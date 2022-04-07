@@ -26,6 +26,7 @@ app.post('/tickets', async (req, res) => {
       'X-Cassandra-Token': token,
       'Content-Type': 'application/json',
     },
+    data: formData,
   };
 });
 
