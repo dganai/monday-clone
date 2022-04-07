@@ -1,4 +1,6 @@
+import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TicketPage = () => {
   const [formData, setFormData] = useState({
@@ -8,8 +10,20 @@ const TicketPage = () => {
   });
   const editMode = false;
 
-  const handleSubmit = () => {
-    console.log('submitted');
+  const navigate = useNavigate;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!editMode) {
+      const response = await axios.post('https://localhost:8080/tickets', {
+        formData,
+      });
+      const success = response.status === 200;
+      if (success) {
+        navigate('/');
+      }
+    }
   };
   const handleChange = (e) => {
     const value = e.target.value;
