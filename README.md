@@ -1,6 +1,6 @@
 # Monday CRM Clone
 
-This is a Monday CRM Clone built with React, Express, and Axios. The clone has multiple pages that allow you to create new tickets, edit existing tickets, and delete tickets.
+This is a Monday CRM Clone built with React, Express, and Axios. The clone has multiple pages that allow you to create new tickets, edit existing tickets, and delete tickets. DataStax Astra is used for the database with Google Cloud.
 
 This was a learning project. It is not for deployment.
 
